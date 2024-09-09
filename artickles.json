@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "New light of yesterday",
+      "text": "Lorem ipsum",
+      "date": "06.09.2024",
+      "author": "John Doe!!!",
+      "comments": []
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "articleId": 1,
+      "text": "Great",
+      "date": "06.09.2024",
+      "author": "Jane Doe"
+    }
+  ]
+}
