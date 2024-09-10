@@ -5,17 +5,63 @@
       "title": "new title",
       "text": "lorem ipsum",
       "date": "10.09.2024",
-      "author": "string",
+      "author": "new author after update",
+      "comments": [
+        {
+          "id": 3,
+          "articleId": 1,
+          "text": "so fishful!",
+          "date": "10.09.2024",
+          "author": "mr salmon"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "new day",
+      "text": "has been appeared",
+      "date": "10.09.2024",
+      "author": "john snow",
+      "comments": [
+        {
+          "id": 2,
+          "articleId": 2,
+          "text": "no its night",
+          "date": "10.09.2024",
+          "author": "sansa stark"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "whats up",
+      "text": "its been a long time",
+      "date": "10.09.2024",
+      "author": "gojo satoru",
       "comments": []
     }
   ],
   "comments": [
     {
-      "id": 2,
+      "id": 1,
       "articleId": 2,
       "text": "great",
       "date": "10.09.2024",
       "author": "me"
+    },
+    {
+      "id": 2,
+      "articleId": 2,
+      "text": "no its night",
+      "date": "10.09.2024",
+      "author": "sansa stark"
+    },
+    {
+      "id": 3,
+      "articleId": 1,
+      "text": "so fishful!",
+      "date": "10.09.2024",
+      "author": "mr salmon"
     }
   ]
 }

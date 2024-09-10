@@ -1,5 +1,6 @@
 const fs = require('fs')
 const helpers = require('../helpers')
+const { logTime } = require('../helpers')
 
 // /api/articles/read - возвращает статью с комментариями по переданному в теле запроса id
 function read(req, res, payload, cb) {
@@ -16,10 +17,13 @@ function read(req, res, payload, cb) {
     try {
       const articlesObj = JSON.parse(data)
       const artickleId = parseInt(params.id);
+      const writeLogStream = fs.createWriteStream('readme.log', { flags: 'a' })
 
       const neededArt = articlesObj.articles.find(art => art.id === artickleId)
       if (neededArt) {
         cb(null, neededArt)
+        const jsonPayload = JSON.stringify(payload)
+        writeLogStream.write(logTime() + ' ' + req.url + ' ' + jsonPayload + ' ' + '\n')
       } else {
         cb({ code: 404, message: 'Article not found' })
       }

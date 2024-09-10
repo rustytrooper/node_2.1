@@ -1,4 +1,5 @@
 const fs = require('fs')
+const { logTime } = require('../helpers')
 
 // /api/comments/create - создает комментарий для статьи с переданными в теле запроса параметрами (в том числе articleId) 
 // / id генерируется на сервере / сервер возвращает созданный комментарий
@@ -39,9 +40,12 @@ function createComment(req, res, payload, cb) {
 
       readableStream.close()
       const writableStream = fs.createWriteStream('./artickles.json', { flags: 'w' })
+      const writeLogStream = fs.createWriteStream('readme.log', { flags: 'a' })
 
       writableStream.write(newArticklesJSON, function () {
         cb(null, newComment)
+        const jsonPayload = JSON.stringify(payload)
+        writeLogStream.write(logTime() + ' ' + req.url + ' ' + jsonPayload + ' ' + '\n')
       })
 
 

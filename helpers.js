@@ -1,3 +1,5 @@
+const format = require('node.date-time')
+
 function parseURL(url) {
   const [parsedUrl, paramsString] = url.split('?');
   let parsedParams = null;
@@ -17,6 +19,12 @@ function parseURL(url) {
   }
 }
 
+function logTime() {
+  return new Date().format('y-M-d H:M:S')
+}
+
+
 module.exports = {
-  parseURL
+  parseURL,
+  logTime
 }

@@ -1,5 +1,6 @@
 const fs = require('fs')
 const helpers = require('../helpers')
+const { logTime } = require('../helpers')
 
 // /api/articles/update - обновляет статью с переданными параметрами по переданному id
 function updateArtickle(req, res, payload, cb) {
@@ -33,9 +34,12 @@ function updateArtickle(req, res, payload, cb) {
       readableStream.close()
 
       const writableStream = fs.createWriteStream('./artickles.json', { flags: 'w' })
+      const writeLogStream = fs.createWriteStream('readme.log', { flags: 'a' })
 
       writableStream.write(newArtJson, function () {
         cb(null, updatedArtickle)
+        const jsonPayload = JSON.stringify(payload)
+        writeLogStream.write(logTime() + ' ' + req.url + ' ' + jsonPayload + ' ' + '\n')
       })
 
     } catch (err) {

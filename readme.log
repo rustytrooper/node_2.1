@@ -1,0 +1,10 @@
+24-9-10 23:9:50 /api/articles/create {"title":"whats up","text":"its been a long time","date":"10.09.2024","author":"gojo satoru"} 
+24-9-10 23:9:34 /api/comments/create {"articleId":2,"text":"no its night","date":"10.09.2024","author":"sansa stark"} 
+24-9-10 23:9:34 /api/comments/create {"articleId":1,"text":"so fishful!","date":"10.09.2024","author":"mr salmon"} 
+24-9-10 23:9:44 /api/articles/create {"title":"for deletion","text":"yey","date":"10.09.2024","author":"number"} 
+24-9-10 23:9:58 /api/articles/delete?id=4 {"title":"for deletion","text":"yey","date":"10.09.2024","author":"number"} 
+24-9-10 23:9:14 /api/comments/create {"articleId":3,"text":"comment to test deletion of comments","date":"10.09.2024","author":"ingiborgo"} 
+24-9-10 23:9:59 /api/comments/delete?id=4 {"articleId":3,"text":"comment to test deletion of comments","date":"10.09.2024","author":"ingiborgo"} 
+24-9-10 23:9:32 /api/articles/update?id=1 {"author":"new author after update"} 
+24-9-10 23:9:31 /api/articles/read?id=2 {"author":"new author after update"} 
+24-9-10 23:9:12 /api/articles/readall {"author":"new author after update"} 
