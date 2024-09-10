@@ -1,6 +1,6 @@
 const http = require('http');
 const reqests = require('./requests')
-// const helpers = require('./helpers')
+
 
 const hostname = '127.0.0.1';
 const port = 4000;
@@ -19,8 +19,6 @@ const handlers = {
 const server = http.createServer((req, res) => {
   parseBody(req, (err, payload) => {
     const handler = getHandler(req.url);
-    // const { url, params } = helpers.parseURL(req.url)
-    // const handler = getHandler(url)
     handler(req, res, payload, (err, result) => {
       if (err) {
         res.writeHead(err.code, { 'Content-Type': 'application/json' });

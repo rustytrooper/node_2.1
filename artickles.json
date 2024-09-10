@@ -2,20 +2,20 @@
   "articles": [
     {
       "id": 1,
-      "title": "New light of yesterday",
-      "text": "Lorem ipsum",
-      "date": "06.09.2024",
-      "author": "John Doe!!!",
+      "title": "new title",
+      "text": "lorem ipsum",
+      "date": "10.09.2024",
+      "author": "string",
       "comments": []
     }
   ],
   "comments": [
     {
-      "id": 1,
-      "articleId": 1,
-      "text": "Great",
-      "date": "06.09.2024",
-      "author": "Jane Doe"
+      "id": 2,
+      "articleId": 2,
+      "text": "great",
+      "date": "10.09.2024",
+      "author": "me"
     }
   ]
 }
